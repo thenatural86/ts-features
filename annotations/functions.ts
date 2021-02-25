@@ -18,8 +18,26 @@ const logger = (message: string): void => {
   console.log(message)
 }
 
-const throwError = (message: string): never => {
+const throwError = (message: string): void => {
   if (!message) {
     throw new Error(message)
   }
 }
+
+const forecast = {
+  date: new Date(),
+  weather: 'sunny',
+}
+
+const logWeather = ({
+  date,
+  weather,
+}: {
+  date: Date
+  weather: string
+}): void => {
+  console.log(date)
+  console.log(weather)
+}
+
+logWeather(forecast)

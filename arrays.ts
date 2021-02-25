@@ -15,3 +15,8 @@ carMakers.push() //.push(100)
 carMakers.map((car: string): string => {
   return car
 })
+
+// flexible types
+const importantDates: (Date | string)[] = [new Date()]
+importantDates.push('203-05-14')
+importantDates.push(new Date())
